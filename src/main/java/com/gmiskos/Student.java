@@ -1,5 +1,7 @@
 package com.gmiskos;
 
+import com.gmiskos.validation.CourseCode;
+
 //import java.util.LinkedHashMap;
 
 public class Student {
@@ -12,6 +14,9 @@ public class Student {
 	
 	private String[] operatingSystems;
 	
+
+	@CourseCode(value="GMI", message="must start with GMI")
+	private String courseCode;
 //	private LinkedHashMap<String, String> countryOptions;
 	
 	public Student() {
@@ -71,6 +76,15 @@ public class Student {
 //	public LinkedHashMap<String, String> getCountryOptions() {
 //		return countryOptions;
 //	}
+	
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
 	
 	
 }

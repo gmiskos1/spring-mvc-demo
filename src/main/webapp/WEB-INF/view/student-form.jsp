@@ -6,6 +6,9 @@
 
 <head>
 	<title>Student Registration Form</title>
+	<style>
+		.error {color:red}
+	</style>
 </head>
 
 <body>
@@ -39,6 +42,11 @@
 		Linux <form:checkbox path="operatingSystems" value="Linux"/>
 		Mac OS<form:checkbox path="operatingSystems" value="Mac OS"/>
 			
+		<br><br>
+		
+		Source Code: <form:input path="courseCode"/>
+		<form:errors path="courseCode" cssClass="error" />
+		
 		<br><br>
 		<input type="submit" value="Submit" />
 	
